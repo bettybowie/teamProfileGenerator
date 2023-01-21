@@ -1,4 +1,8 @@
 const inquirer = require('inquirer');
+const Employee = require('./lib/employee');
+const Intern = require('./lib/intern');
+const Engineer = require('./lib/engineer');
+const Manager = require('./lib/manager');
 const fs = require('fs');
 
 //  Create an array of questions for user input
@@ -41,7 +45,7 @@ const questions = [
 
 
 
-// use inquirer prompt questions and write README file
+// use inquirer prompt questions and write html file
 inquirer
 .prompt(questions)
 
