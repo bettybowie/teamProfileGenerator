@@ -13,6 +13,7 @@
 # git has its own built in compression methods
 node_modules
 .dist
+dist
 *.7z
 *.dmg
 *.gz
