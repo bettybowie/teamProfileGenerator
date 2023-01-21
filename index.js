@@ -11,18 +11,40 @@ const questions = [
     {
       type: "input",
       message: "What is the team manager's id?",
-      name: "email",
+      name: "id",
     },
     {
       type: "input",
-      message: "What is the team manager's id?",
+      message: "What is the team manager's email?",
       name: "email",
     },
+    {
+      type: "number",
+      message: "What is the team manager's office number?",
+      name: "officeNumber",
+      validate: function(input) {
+        if (input !== "number") {
+          console.log('\nPlease enter a positive number.');
+
+        }
+      }
+    },
+    {
+      type: "list",
+      message: "Which type of team member would you like to add?",
+      choices:[
+        {value: "Engineer", name: "engineer"},
+        {value: "Intern", name: "intern"},
+        {value: "I don't want to add anymore team members", name: "no more adding"}]
+    },
 ];
+
+
 
 // use inquirer prompt questions and write README file
 inquirer
 .prompt(questions)
+
 .then((data) => {
     const readmeContent = generateMarkdown(data);
 
