@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    background-color: #9db0a4;
+}
+
+h1 {
+    padding: 40px;
+    color: #3e516b;
+    font-size: 100px;
+}
