@@ -7,7 +7,7 @@ const fs = require("fs");
 const team = [];
 
 function getManagerInfo() {
-    console.log("Welcome to team member generator!\n Let's start building your team!\n")
+    console.log("Welcome to team profile generator!\n Let's start building your team!\n")
     inquirer
         .prompt([
             {
@@ -135,15 +135,16 @@ function generateHTML(array) {
             <div class="card col-3 rounded-3">
                 <div class="card-title">
                     <h4 class="name">${employee.getName()}</h4>
-                    <h5 class="job-title">${employee.getRole()} </h5>
+                    <h5 class="job-title">${employee.getRole()}</h5>
                 </div>
                 <div class="card-text">
                     <p>Employee ID: ${employee.getId()} </p>
-                    <p>Email: <a href='mailto:${employee.getEmail()} '>${employee.getEmail()}</a></p>
+                    <p>Email: <a href='mailto:${employee.getEmail()}'>${employee.getEmail()}</a></p>
                     <p>${employee.getRole()==="Intern" ? "School: " + employee.getSchool(): employee.getRole()==="Manager" ? "Office Number: " + employee.getOfficeNumber(): "GitHub: " + "<a href='https://github.com/" + employee.getGithub() + "' target='_blank'>" + employee.getGithub() + "</a>"} </p>
                 </div>
             </div>`
     });
+
     const finalHtml = `
     <!DOCTYPE html>
     <html lang="en">
