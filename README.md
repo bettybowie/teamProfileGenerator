@@ -18,14 +18,14 @@ After cloning this repo, the user can then install inquirer package by entering 
 
 The user can start the application by entering "node index.js" in the command line.
 
-The the user will be prompted a series of questions about their project.
+The the user will be prompted a series of questions about their team members.
 
-After all the information has been collected, an HTML file will be generated.
+After all the information has been collected, an HTML file will be generated in the dist/ folder.
 
 
 ## Visual
 
-[Demo Video]()
+[Demo Video](https://drive.google.com/file/d/1rXbEJS74Ys2bOvCftQ6ehaeS0qc_CxVM/view)
 
 ## License
 
