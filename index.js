@@ -6,6 +6,7 @@ const Engineer = require("./lib/engineer");
 const fs = require("fs");
 const team = [];
 
+// function to prompt questions to collect the manager's info and push them to the array
 function getManagerInfo() {
     console.log("Welcome to team profile generator!\n Let's start building your team!\n")
     inquirer
@@ -38,6 +39,7 @@ function getManagerInfo() {
         })
 }
 
+// function to prompt questions to collect the intern's info and push them to the array
 function getInternInfo(info) {
     const internId = info.id;
     const internName = info.name;
@@ -57,6 +59,7 @@ function getInternInfo(info) {
         })
 }
 
+// function to prompt questions to collect the employee's basic info
 function getEmployeeInfo(position) {
     inquirer
         .prompt([
@@ -85,6 +88,7 @@ function getEmployeeInfo(position) {
         })
 }
 
+// function to prompt questions to collect the engineer's info and push them to the array
 function getEngineerInfo(info) {
     const engineerId = info.id;
     const engineerName = info.name;
@@ -104,6 +108,7 @@ function getEngineerInfo(info) {
         })
 }
 
+// function to prompt user to choose the type of employee to add to the team
 function promptMenu() {
     inquirer
         .prompt([
@@ -129,6 +134,7 @@ function promptMenu() {
         })
 }
 
+// function to generate an HTML file, template to create a card for each new employee 
 function generateHTML(array) {
     const teamMembers =  array.map(employee => {
             return `
@@ -174,4 +180,5 @@ fs.writeFile('dist/index.html', finalHtml, 'utf-8', (err) =>
 err ? console.log(err) : console.log('Successfully created index.html!'))
 }
 
+// call function to run application
 getManagerInfo();
